@@ -39,4 +39,3 @@ This Python script generates "Nano Banana" (Gemini 3 Pro Image) images based on 
 
 ## Troubleshooting
 - If you see `models/gemini-X not found`, run `python debug_models.py` to see the exact model names available to your API key and update `nano_banana_gen.py` accordingly.
-# gemini

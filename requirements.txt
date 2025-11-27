@@ -1,0 +1,6 @@
+requests
+beautifulsoup4
+dspy-ai
+google-genai
+google-generativeai
+pillow
