@@ -6,8 +6,27 @@ This Python script generates "Nano Banana" (Gemini 3 Pro Image) images based on 
 - **Web Scraping**: Extracts text from a given URL.
 - **Prompt Engineering**: Uses `dspy` with a Gemini text model to create optimized image prompts.
 - **Image Generation**: Uses the `google-genai` SDK to call the `gemini-3-pro-image-preview` model.
-
-## Files
+ 
+ ## Workflow
+ ```mermaid
+ sequenceDiagram
+     participant User
+     participant Script as nano_banana_gen.py
+     participant Scraper as Web Scraper
+     participant TextModel as dspy / Gemini Text
+     participant ImageModel as Nano Banana (Gemini Image)
+ 
+     User->>Script: Run script (provide URL)
+     Script->>Scraper: Scrape URL
+     Scraper-->>Script: Return text content
+     Script->>TextModel: Generate Image Prompt (dspy)
+     TextModel-->>Script: Return optimized prompt
+     Script->>ImageModel: Generate Image (gemini-3-pro)
+     ImageModel-->>Script: Return Image Data
+     Script->>User: Save generated_image.png
+ ```
+ 
+ ## Files
 - [nano_banana_gen.py](./nano_banana_gen.py): The main script.
 - [requirements.txt](./requirements.txt): Python dependencies.
 - [debug_models.py](./debug_models.py): Helper to list available models.
