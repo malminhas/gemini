@@ -8,9 +8,9 @@ This Python script generates "Nano Banana" (Gemini 3 Pro Image) images based on 
 - **Image Generation**: Uses the `google-genai` SDK to call the `gemini-3-pro-image-preview` model.
 
 ## Files
-- `nano_banana_gen.py`: The main script.
-- `requirements.txt`: Python dependencies.
-- `debug_models.py`: Helper to list available models.
+- [nano_banana_gen.py](./nano_banana_gen.py): The main script.
+- [requirements.txt](./requirements.txt): Python dependencies.
+- [debug_models.py](./debug_models.py): Helper to list available models.
 
 ## Setup & Usage
 
@@ -21,9 +21,13 @@ This Python script generates "Nano Banana" (Gemini 3 Pro Image) images based on 
     *Note: Ensure `google-generativeai` is installed if you encounter module errors.*
 
 2.  **Set API Key**:
+    You need a Google Cloud API key with access to Gemini models. You can get one from [Google AI Studio](https://aistudio.google.com/).
+    
+    Once you have the key, set it as an environment variable:
     ```bash
-    export GOOGLE_API_KEY="your_api_key"
+    export GOOGLE_API_KEY="your_api_key_here"
     ```
+    Alternatively, you can create a `.env` file (if you modify the script to load it) or paste it directly into the script (not recommended for sharing).
 
 3.  **Run the Script**:
     ```bash
